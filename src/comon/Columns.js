@@ -6,7 +6,7 @@ export const Columns = [
     title: "Name",
     dataIndex: "name",
     width: 300,
-    sorter: (a, b) => a.name.charAt(0) - b.name.charAt(0),
+    sorter: (a, b) => a.name.charAt(0) >= b.name.charAt(0),
   },
   {
     title: "Email",

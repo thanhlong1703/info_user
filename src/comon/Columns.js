@@ -38,10 +38,6 @@ export const Columns = [
     sorter: (a, b) => a.age - b.age,
   },
   {
-    title: "DoB",
-    dataIndex: "dateOfBirth",
-  },
-  {
     title: "Phone",
     dataIndex: "phone",
   },

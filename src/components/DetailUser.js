@@ -18,7 +18,7 @@ import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import moment from "moment";
+import dayjs from "dayjs";
 //
 import { clearUser, getUser } from "../redux/UsersSlice";
 import { delData } from "../service/deleteData";
@@ -62,8 +62,8 @@ function DetailUser() {
         name: dataUser.name,
         address: dataUser.address,
         email: dataUser.email,
-        dateOfBirth: moment(
-          moment(new Date(dataUser.dateOfBirth)).format("DD/MM/YYYY"),
+        dateOfBirth: dayjs(
+          dayjs(new Date(dataUser.dateOfBirth)).format("DD/MM/YYYY"),
           "DD/MM/YYYY"
         ),
         isGraduate: dataUser.isGraduate,
